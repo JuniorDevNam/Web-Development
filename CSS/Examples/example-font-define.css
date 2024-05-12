@@ -1,0 +1,59 @@
+/*
+If your custom font has different styles (such as bold or italic) separated 
+into different font files, you can use multiple `@font-face` rules in your 
+CSS to define each font style and link to the corresponding font file.
+
+Here's an example of how to do this:
+*/
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('path/to/regular-font-file.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('path/to/bold-font-file.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('path/to/italic-font-file.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('path/to/bold-italic-font-file.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+    font-family: 'MyCustomFont', sans-serif;
+}
+/*
+In this example, we're defining four `@font-face` rules for our custom font,
+one for each combination of `font-weight` and `font-style`. 
+Each `@font-face` rule specifies the location of the corresponding font file 
+on our server using the `src` property.
+
+After defining the custom font using the `@font-face` rules, we can use it 
+in our CSS by specifying its name in the `font-family` property and setting 
+the desired `font-weight` and `font-style`.
+
+For example, to apply the bold style of our custom font to a paragraph, we could do this:
+*/
+
+p.bold {
+    font-weight: bold;
+}
+/*
+And in our HTML file, we could apply this style to a paragraph like this:
+
+<p class="bold">This is some bold text.</p>
+*/

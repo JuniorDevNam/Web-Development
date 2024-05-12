@@ -1,0 +1,8 @@
+img {
+    width: 100%;
+    height:auto;
+}
+
+/* The image will be responsive and scale up and down. 
+The image can be scaled up to be larger than its original size. 
+A better solution, in many cases, will be to use the max-width property instead.
